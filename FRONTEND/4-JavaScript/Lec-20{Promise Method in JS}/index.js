@@ -1,0 +1,2 @@
+// Promise Method in JS -->
+
