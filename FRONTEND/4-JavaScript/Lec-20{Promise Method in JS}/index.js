@@ -1,2 +1,5 @@
-// Promise Method in JS -->
+// Promise Method in JS->
+
+//----------------------------------promise.all -------------------------------->
+
 
