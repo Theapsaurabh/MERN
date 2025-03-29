@@ -18,11 +18,14 @@
 two type of import and exports
 
 - default Export/Import
- export default component
- import component from "path";
+ -export default component
+ -import component from "path";
 
  - Named Export and Import
- export const component
- import {component } from "path";
+ -export const component
+ -import {component } from "path";
 
 
+- React Hooks-> {Normal JavaScript Junction}
+- 1-> UseState() -> Superfull State Variable in react
+- useEffect() -> 

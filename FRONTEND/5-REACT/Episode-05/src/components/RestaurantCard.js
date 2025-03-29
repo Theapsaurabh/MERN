@@ -18,7 +18,7 @@ const RestauruntCard= (props)=>{
             }}>
                 <img className="item-1"
                  alt="food" src={CDN_URL + cloudinaryImageId}/>
-            <h3>{resData.data.resName}</h3>
+            <h3>{resData.data.name}</h3>
             <h4>{resData.data.cuisines.join(", ")}</h4>
             <h4>{resData.data.deliveryTime} minutes</h4>
             <h4>{resData.data.totalRatings} stars</h4>
