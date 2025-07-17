@@ -151,6 +151,8 @@ Promise.race([
 ```
 
 ### 🔹 `Promise.allSettled([p1, p2, p3])`
+🔍 What does Promise.allSettled do?
+Promise.allSettled takes an array of promises and returns a new promise that resolves when all the input promises have settled (either fulfilled or rejected). Unlike Promise.all, it never rejects — it always resolves with an array of results.
 
 Waits for **all** to settle (resolve or reject), and returns status+value for each.
 
