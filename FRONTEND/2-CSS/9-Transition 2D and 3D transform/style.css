@@ -18,8 +18,11 @@
     justify-content: center;
     align-items: center;
     width: 200px;
-    height: 200px;
-    background-color: violet;
+    height: 400px;
+    background-color: rgba(0, 255, 26, 0.936);
+    
+    
+  
     /* transform: translateY(50px) translateX(50px); */
     /* transform: translateY(50px); */
     /* transform: translate(50px, 50px); */
@@ -44,6 +47,8 @@
 }
 
 .box:hover{
+   /* height: 100px; */
+    /* width: 100px; */ 
     /* scroll-padding-top: 50px ; */
     /* width: 1000px; */
     /* height: 1000px; */
