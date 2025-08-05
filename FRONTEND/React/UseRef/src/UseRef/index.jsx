@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 export const UseRef = () => {
   //   const username = document.getElementById("username");
-  //   const password = document.getElementById("password");
+  //   const password = document.getElementById("password")
 
   const username = useRef(null);
   const password = useRef(null);
