@@ -19,7 +19,7 @@ export const BioProvider = ({ children }) => {
 // Step 3: Create the custom hook
 // eslint-disable-next-line react-refresh/only-export-components
 export const useBioContext = () => {
-  const context = useContext(BioContext); // ✅ useContext, not use
+  const context = useContext(BioContext); 
   if (context === undefined) {
     throw new Error("Component must be wrapped with BioProvider");
   }
