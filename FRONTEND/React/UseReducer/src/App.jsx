@@ -1,6 +1,6 @@
 
 
-import ReducerComp from "./UseReduce"
+import {ReducerComp  } from "./UseReduce"
 
 
 
