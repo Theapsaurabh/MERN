@@ -6,7 +6,7 @@ const ErrorPages = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Log the missing path to console (can be sent to a backend)
+    
     console.error(`404: Page not found - ${location.pathname}`);
 
     // Optional: Redirect to home after 5 seconds

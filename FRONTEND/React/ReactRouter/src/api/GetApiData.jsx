@@ -1,7 +1,7 @@
 const GetApiData = async () => {
   try {
     const response = await fetch(
-      "http://www.omdbapi.com/?i=tt3896198&apikey=5c749a37"
+      `${import.meta.env.VITE_API_KEY}`
     );
 
     if (!response.ok) {

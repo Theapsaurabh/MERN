@@ -1,7 +1,8 @@
-import { useLoaderData } from 'react-router-dom';
+import { NavLink, useLoaderData } from 'react-router-dom';
 
 const Movie = () => {
   const movie = useLoaderData();
+  console.log(movie)
 
   if (!movie || movie.Response === "False") {
     return (
@@ -35,9 +36,15 @@ const Movie = () => {
             <p><span className="font-semibold">IMDB Rating:</span> {movie.imdbRating} ⭐</p>
             <p><span className="font-semibold">Awards:</span> {movie.Awards}</p>
             <p><span className="font-semibold">Runtime:</span> {movie.Runtime}</p>
+           
           </div>
         </div>
+        <NavLink to={`/movie/${movie.imdbID}`}>
+           <button className='bg-amber-500 w-10px h-10px border-1x black' >Watch Now</button>
 
+
+        </NavLink>
+        
         <a
           href={`https://www.imdb.com/title/${movie.imdbID}/`}
           target="_blank"
