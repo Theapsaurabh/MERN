@@ -1,0 +1,98 @@
+/* Container for posts */
+.section-post {
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* List layout */
+.section-post ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Post card styling */
+.section-post li {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbff 100%);
+  border: 1px solid rgba(39, 52, 86, 0.06);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(21, 30, 60, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Hover effect for cards */
+.section-post li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(21, 30, 60, 0.1);
+}
+
+/* Title styling */
+.section-post li p:first-of-type {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #16213e;
+}
+
+/* Body styling */
+.section-post li p:nth-of-type(2) {
+  margin: 0;
+  color: #334155;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+/* Action buttons container */
+.section-post .actions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Base button styles */
+.section-post button {
+  border: none;
+  cursor: pointer;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+/* Edit button */
+.section-post button:first-child {
+  background: linear-gradient(90deg,#2563eb,#0ea5e9);
+  color: white;
+}
+.section-post button:first-child:hover {
+  transform: translateY(-2px);
+}
+
+/* Delete button */
+.section-post button:last-child {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid rgba(239,68,68,0.2);
+}
+.section-post button:last-child:hover {
+  background: rgba(239,68,68,0.06);
+  transform: translateY(-2px);
+}
+
+/* Responsive layout */
+@media (max-width: 880px) {
+  .section-post ul {
+    grid-template-columns: 1fr;
+  }
+}
