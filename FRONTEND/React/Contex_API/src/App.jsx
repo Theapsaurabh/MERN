@@ -1,5 +1,6 @@
 import { Home } from "./ContexAPI/Home"
 import { BioProvider } from "./ContexAPI"
+import { About } from "./ContexAPI/About"
 
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <div>
       <BioProvider>
         <Home/>
+        <About/>
 
       </BioProvider>
      
