@@ -1,10 +1,10 @@
- const About =()=>{
+ const Connection =()=>{
     return (
      <h1>
-        hello Main about 
+        hello Mai Connection Compoennet hu
      </h1>
     )
 
 
 }
-export default About
+export default Connection
