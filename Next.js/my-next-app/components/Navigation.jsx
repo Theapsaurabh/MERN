@@ -26,6 +26,9 @@ export default function Navigation() {
           <li>
             <Link href="/service">Service</Link>
           </li>
+          <li>
+            <Link href="/projects/jokes">Ek Mast Joke maar re</Link>
+          </li>
         </ul>
       </nav>
     </header>
