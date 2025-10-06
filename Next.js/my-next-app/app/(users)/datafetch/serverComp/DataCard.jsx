@@ -11,7 +11,7 @@ const DataCard = async ({ userName }) => {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 500);
+    }, 5000);
   });
 
   return (
