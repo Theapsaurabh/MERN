@@ -1,12 +1,19 @@
-import {db} from "@/config/bd";
-const StaticPage= async ()=>{
+// app/(users)/static/page.jsx
+import db from "@/config/db";
 
-    const doctors= await db.execute("Select * from startersql")
-    console.log(doctors)
-    return <div>
-        Hii Fullstack 
+const StaticPage = async () => {
+  try {
+    const [doctors] = await db.execute("SELECT * FROM users"); 
+    console.log(doctors);
+  } catch (error) {
+    console.error("❌ Database query failed:", error);
+  }
 
-
+  return (
+    <div>
+      Hii Fullstack
     </div>
-}
-export default StaticPage
+  );
+};
+
+export default StaticPage;
