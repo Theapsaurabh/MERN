@@ -1,17 +1,21 @@
+"use client" //! => in the next.js we can use framer motion only in client components
+
+
+import {easeInOut, motion} from "motion/react"
 import Image from "next/image";
 import thapa from "@/public/thapa.jpg"
 import style from "./service.module.css"
 
 {/**Meta Data */}
-export const metadata= {
-    title: "Service Page",
-    description: "This is my service ",
-    authors: [{name: "Saurabh Pandey "}, {name:"Coder"}],
-    keywords:['next.js', "React.js", "Frontend Developer", "Backend Developer"],
+// export const metadata= {
+//     title: "Service Page",
+//     description: "This is my service ",
+//     authors: [{name: "Saurabh Pandey "}, {name:"Coder"}],
+//     keywords:['next.js', "React.js", "Frontend Developer", "Backend Developer"],
     
+//! -> we can't use meta data in client components
 
-
-};
+// };
 
 
 const Services= async ()=>{
@@ -27,23 +31,49 @@ const Services= async ()=>{
                     </h2>
                     <div className="grid grid-cols-3 gap-8">
                         {/**<--- Team Member-1 ----->*/}
-                        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:translate-y-2 transition-all duration-300">
-                            <div className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <Image src="/thapa.jpg" width={500} height={500} alt="Saurabh"
+                        <motion.div
+                        initial={{opacity:0, y:50}}
+                            animate={{opacity:1, y:0}}
+                            whileHover={{scale:1.1}}
+                            transition={{duration:0.2, ease:easeInOut}}
+                            whileTap={{scale:0.9}}
+
+
+                        
+                        className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:translate-y-2 transition-all duration-300">
+                            <motion.div
+                            whileHover={{rotate:360}}
+                            transition={{duration:1, ease:easeInOut}}
+                            
+                           
+                            
+                            className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                                <Image 
+                                whileHover= {{rotate:360}}
+                                src="/thapa.jpg" width={500} height={500} alt="Saurabh"
                                 className="w-full h-full rounded-full  "
                                 />
 
 
-                            </div>
-                            <h3 className="text-lg font-semibold text-center text-gray-800">
+                            </motion.div>
+                            <motion.h3
+                            initial={{opacity:0, y:50}}
+                            animate={{opacity:1, y:0}}
+                            whileHover={{scale:1.1}}
+                            transition={{duration:0.2, ease:easeInOut, delay:1}}
+                            whileTap={{scale:0.9}}
+
+
+
+                             className="text-lg font-semibold text-center text-gray-800">
                                   Saurabh Pandey
-                            </h3>
+                            </motion.h3>
                             <p className="text-sm text-gray-600 text-center mt-2">Frontend Developer</p>
                             <p className="text-sm text-gray-500 text-center mt-1">react & Typescript</p>
 
                           
 
-                        </div> 
+                        </motion.div> 
 
                         {/**<--- Team Member-2 ----->*/}
                         <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:translate-y-2 transition-all duration-300">
