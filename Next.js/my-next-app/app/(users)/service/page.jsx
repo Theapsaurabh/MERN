@@ -5,6 +5,9 @@ import {easeInOut, motion} from "motion/react"
 import Image from "next/image";
 import thapa from "@/public/thapa.jpg"
 import style from "./service.module.css"
+import {useEffect, useRef} from "react"
+import { gsap } from "gsap";
+
 
 {/**Meta Data */}
 // export const metadata= {
@@ -18,7 +21,34 @@ import style from "./service.module.css"
 // };
 
 
-const Services= async ()=>{
+const Services=  ()=>{
+    const cardRef= useRef();
+   
+
+   useEffect(() => {
+     const elem = cardRef.current;
+  const ctx = gsap.context(() => {
+    
+    // Set initial state
+    gsap.set(elem, {
+      opacity: 0,
+      y: 50,
+      scale: 0,
+    });
+
+    // Animate to final state
+    gsap.to(elem, {
+      duration: 0.8,
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      ease: "power3.out",
+    });
+  });
+
+  return () => ctx.revert(); // Cleanup on unmount
+}, []);
+
     return(
         <section>
             <h1 className={style.common_heading}>
@@ -49,7 +79,7 @@ const Services= async ()=>{
                             
                             className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                                 <Image 
-                                whileHover= {{rotate:360}}
+                               
                                 src="/thapa.jpg" width={500} height={500} alt="Saurabh"
                                 className="w-full h-full rounded-full  "
                                 />
@@ -94,7 +124,7 @@ const Services= async ()=>{
                         </div> 
 
                         {/**<--- Team Member-3 ----->*/}
-                        <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:translate-y-2 transition-all duration-300">
+                        <div ref={cardRef} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg hover:translate-y-2 transition-all duration-300">
                             <div className="w-24 h-24 bg-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                                  <Image src="/thapa.jpg" width={500} height={500} alt="Saurabh"
                                 className="w-full h-full rounded-full  "
