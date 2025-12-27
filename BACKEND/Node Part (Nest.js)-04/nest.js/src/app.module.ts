@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { HelloModule } from './hello/hello.module';
 import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
+import { PostModule } from './post/post.module';
 // ! this is root module of nest application here use all sub modules
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { ConfigModule } from '@nestjs/config';
     }),
     HelloModule,
     UserModule,
+    PostModule,
     
   ],
   controllers: [AppController],
