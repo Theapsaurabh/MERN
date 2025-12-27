@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* ========== File Layout ========== */
+    "rootDir": ".",
+    "outDir": "./dist",
+
+    /* ========== Environment ========== */
+    "target": "ES2021",
+    "module": "CommonJS",
+    "lib": ["ES2021"],
+    "types": ["node"],
+
+    /* ========== Output ========== */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* ========== Type Safety ========== */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* ========== Interop ========== */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* ========== Stability ========== */
+    "skipLibCheck": true
+  },
+  "include": ["client/**/*", "server/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
