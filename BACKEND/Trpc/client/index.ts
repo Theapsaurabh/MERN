@@ -5,9 +5,16 @@ const trpc = createTRPCClient<AppRouter>({
   links: [
     httpBatchLink({
       url: 'http://localhost:3000',
+      async headers() {
+        return {
+          authorization: 'Bearer exampletoken123'  // Replace with actual token retrieval logic
+        };
+      }
     }),
+    
   ],
 });
+
 
 async function main() {
   const response = await trpc.createTodo.mutate({
@@ -16,6 +23,14 @@ async function main() {
   });
 
   console.log(response);
+
+
+    const signupResponse = await trpc.signUp.mutate({ 
+        username: "newuser",
+        password: "securepassword123"
+    });      
+
+    console.log(signupResponse);
 }
 
 main().catch(console.error);
