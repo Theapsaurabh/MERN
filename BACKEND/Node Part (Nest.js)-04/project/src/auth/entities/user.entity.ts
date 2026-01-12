@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Post } from 'src/posts/entities/post.entity';
 import {
   Column,
